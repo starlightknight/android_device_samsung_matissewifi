@@ -1,0 +1,88 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+on boot
+# permissions for bluetooth.
+    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
+    chown bluetooth net_bt_stack ro.bt.bdaddr_path
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
+    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+
+# permission for Input Device(TouchScreen).
+    chmod 0660 /sys/class/input/input1/enabled
+    chown system system /sys/class/input/input1/enabled
+
+# permissions for touchkeys
+    chown system system /sys/class/sec/sec_touchkey/extra_button_event
+
+# efs  
+   # mkdir /efs/drm 0700 system system
+    mkdir /efs/imei 0775 radio radio
+    restorecon -R /efs
+
+# TODO: replace it with device's DEXPREOPT_BOOT_JARS
+
+# RIL
+service at_distributor /system/bin/at_distributor
+    class late_start
+    user root
+    group radio log
+
+service diag_uart_log /system/bin/diag_uart_log
+    class main
+    user root
+    group radio
+
+# for ethernet
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+# service for TZPR provisioning version check app
+service scranton_RD /system/bin/scranton_RD
+    class main
+    user root
+    disabled
+    oneshot
+
+# start for TZPR provisioning version check app
+on property:sys.qseecomd.enable=true
+    start scranton_RD
+
+    mkdir /efs/drm/playready 0775
+    chown drm system /efs/drm/playready
+    chmod 0775 /efs/drm/playready
+
+
+#For Absolute Persistence Partition 
+
+on fs
+     mkdir /persdata 0755 system system 
+     mkdir /persdata/absolute 0750 system system 
+  
+     wait /dev/block/platform/msm_sdcc.1/by-name/persdata 
+     check_fs /dev/block/platform/msm_sdcc.1/by-name/persdata ext4 
+     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persdata /persdata/absolute nosuid nodev barrier=1 
+      
+     chown system system /persdata 
+     chmod 0755 /persdata 
+     chown system system /persdata/absolute 
+     chmod 0750 /persdata/absolute
+
+
+
+# Kickstart the Wireless subsystem
+write /dev/wcnss_wlan 1
+write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
+
+service ftm_ptt /system/bin/ftm_ptt -d
+    user root
+    group radio system
+    disabled
+
+# end of wifi
