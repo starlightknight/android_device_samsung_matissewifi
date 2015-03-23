@@ -98,7 +98,6 @@ lib/drm/libomaplugin.so
 lib/drm/libplayreadyplugin.so
 lib/drm/libprgenericplugin.so
 lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
-lib/hw/sensors.msm8226.so
 vendor/lib/B08QT_libchromatix_imx175_common.so
 vendor/lib/B08QT_libchromatix_imx175_common_res0.so
 vendor/lib/B08QT_libchromatix_imx175_common_res1.so
@@ -340,7 +339,6 @@ vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/hw/lights.msm8226.so
 vendor/lib/hw/power.qcom.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/rfsa/adsp/libadsp_denoise_skel.so

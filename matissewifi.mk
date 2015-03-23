@@ -73,6 +73,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/matissewifi/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8226
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
