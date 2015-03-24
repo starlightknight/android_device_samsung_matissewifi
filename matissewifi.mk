@@ -37,6 +37,7 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 # GPS
@@ -50,6 +51,9 @@ PRODUCT_COPY_FILES += \
 # Input device
 PRODUCT_COPY_FILES += \
     device/samsung/matissewifi/idc/sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
+
+# IR
+PRODUCT_PACKAGES += consumerir.default
 
 # Keylayouts
 PRODUCT_COPY_FILES += \

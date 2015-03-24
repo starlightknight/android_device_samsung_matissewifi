@@ -98,6 +98,7 @@ lib/drm/libomaplugin.so
 lib/drm/libplayreadyplugin.so
 lib/drm/libprgenericplugin.so
 lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
+lib/hw/sensors.msm8226.so
 vendor/lib/B08QT_libchromatix_imx175_common.so
 vendor/lib/B08QT_libchromatix_imx175_common_res0.so
 vendor/lib/B08QT_libchromatix_imx175_common_res1.so
