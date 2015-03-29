@@ -53,17 +53,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/matissewifi/idc/sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
 
 # IR
-PRODUCT_PACKAGES += consumerir.default
+PRODUCT_PACKAGES += consumerir.msm8226
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/samsung/matissewifi/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
-    device/samsung/matissewifi/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
-    device/samsung/matissewifi/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/samsung/matissewifi/keylayout/philips_remote_ir.kl:system/usr/keylayout/philips_remote_ir.kl \
-    device/samsung/matissewifi/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
-    device/samsung/matissewifi/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl \
-    device/samsung/matissewifi/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
+    device/samsung/matissewifi/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl
 
 # Keystore
 PRODUCT_PACKAGES += \
@@ -95,6 +89,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/matissewifi/configs/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf \
     device/samsung/matissewifi/configs/thermald-8226.conf:system/etc/thermald-8226.conf
+
+# Wifi
+PRODUCT_PACKAGES += \
+    libnetcmdiface \
+    macloader
 
 # Override build.prop
 PRODUCT_PROPERTY_OVERRIDES += \

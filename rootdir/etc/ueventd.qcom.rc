@@ -167,6 +167,11 @@
 /sys/devices/virtual/input/input*                   poll           0660    input    system
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
 
+# IR
+/sys/devices/virtual/sec/sec_ir/check_ir            0660     system radio
+/sys/devices/virtual/sec/sec_ir/ir_send             0660     system radio
+/sys/devices/virtual/sec/sec_ir/ir_send_result      0660     system radio
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 #nfc permissions

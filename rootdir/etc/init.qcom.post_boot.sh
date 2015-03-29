@@ -649,10 +649,6 @@ case "$target" in
         chmod -h 664 /sys/devices/system/cpu/cpu3/online
 
         chown -h system.system /sys/devices/virtual/sec/sec_touchkey/brightness
-        chown -h system.system /sys/devices/virtual/sec/sec_ir/check_ir
-        chown -h system.system /sys/devices/virtual/sec/sec_ir/send_ir
-        chown -h system.system /sys/devices/virtual/sec/sec_ir/ir_send_result
-        
     ;;
 esac
 
