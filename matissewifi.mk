@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += consumerir.msm8226
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
+    device/samsung/matissewifi/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/samsung/matissewifi/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl
 
 # Keystore
