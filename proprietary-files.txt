@@ -1,3 +1,10 @@
+#####################################################################
+# Set up for Stock - to pull from a CM build, swap commented lines
+# with the mapped one above it.
+#
+# You need to DeOdex the APK if pulling an ODEXed version from stock
+#####################################################################
+app/TimeService.apk
 bin/btnvtool
 bin/ds_fmc_appd
 bin/hci_qcomm_init
@@ -99,6 +106,7 @@ lib/drm/libomaplugin.so
 lib/drm/libplayreadyplugin.so
 lib/drm/libprgenericplugin.so
 lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
+#lib/hw/camera.vendor.msm8226.so
 lib/hw/sensors.msm8226.so
 vendor/lib/B08QT_libchromatix_imx175_common.so
 vendor/lib/B08QT_libchromatix_imx175_common_res0.so
