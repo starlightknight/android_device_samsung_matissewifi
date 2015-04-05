@@ -152,7 +152,6 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libadsprpc.so
 vendor/lib/libaudcal.so
 vendor/lib/libbtnv.so
-vendor/lib/libbt-vendor.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d2_z180.so
 vendor/lib/libc2d30.so
