@@ -172,6 +172,15 @@
 /sys/devices/virtual/sec/sec_ir/ir_send             0660     system radio
 /sys/devices/virtual/sec/sec_ir/ir_send_result      0660     system radio
 
+# Wake
+/sys/devices/virtual/sec/sec_key/wakeup_keys        0664     system radio
+
+# TSP
+/sys/devices/virtual/sec/tsp/cmd           0440     system radio   
+/sys/devices/virtual/sec/tsp/cmd_list      0666     root   root
+/sys/devices/virtual/sec/tsp/cmd_result    0666     root   root
+/sys/devices/virtual/sec/tsp/cmd_status    0666     root   root
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 #nfc permissions

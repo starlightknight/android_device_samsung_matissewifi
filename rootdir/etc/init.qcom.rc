@@ -82,6 +82,9 @@ on boot
     chown system radio /sys/devices/virtual/sec/sec_ir/ir_send
     chown system radio /sys/devices/virtual/sec/sec_ir/ir_send_result
 
+    chown system radio /sys/devices/virtual/sec/sec_key/wakeup_keys
+    chown system radio /sys/devices/virtual/sec/tsp/cmd
+
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
