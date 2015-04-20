@@ -225,7 +225,7 @@
     </integer-array>
 
     <!-- Workaround for devices with broken keyboards -->
-    <bool name="config_forceDisableHardwareKeyboard">true</bool>
+    <bool name="config_forceDisableHardwareKeyboard">false</bool>
 
     <!-- Hide this setting because we are forcing it to be enabled in build.prop.
          Note: This is declared in both values/config.xml and values-sw600dp/config.xml.
