@@ -10,6 +10,7 @@ bin/ds_fmc_appd
 bin/hci_qcomm_init
 bin/hvdcp
 bin/irsc_util
+bin/macloader
 bin/mm-pp-daemon
 bin/mm-qcamera-daemon
 bin/mpdecision
@@ -37,9 +38,6 @@ etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
-etc/firmware/wlan/prima/WCNSS_cfg.dat
-etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
 etc/wifi/wpa_supplicant_ath6kl.conf

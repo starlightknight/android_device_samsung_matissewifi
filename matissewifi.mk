@@ -92,9 +92,17 @@ PRODUCT_COPY_FILES += \
     device/samsung/matissewifi/configs/thermald-8226.conf:system/etc/thermald-8226.conf
 
 # Wifi
+PRODUCT_COPY_FILES += \
+    kernel/samsung/matissewifi/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    kernel/samsung/matissewifi/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
+    kernel/samsung/matissewifi/drivers/staging/prima/firmware_bin/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
-    macloader
+    libcurl \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
+    libwcnss_qmi \
+    wcnss_service
 
 # Override build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
